@@ -1,0 +1,10 @@
+## Setup IPv4 interface in /etc/network/interfaces
+##
+## Prerequisite: open `/etc/network/interfaces`
+auto $@Target Interface$
+allow-hotplug $@Target Interface$
+iface $@Target Interface$ inet static
+address $@Local IP with mask$
+gateway $@Gateway IP in same network$
+## Do not forget `systemctl restart networking`!
+## See results with `ip a`

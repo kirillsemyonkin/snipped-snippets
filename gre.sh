@@ -7,3 +7,4 @@
 ip tunnel add $@Interface Name$ mode gre local $@Public Local IP$ remote $@Public Remote IP$ ttl 255
 ip link set $@Interface Name$ up
 ip add add $@Tunnel Local IP$/30 dev $@Interface Name$
+## Additionally, you can `systemctl restart frr` after this

@@ -1,13 +1,13 @@
 ## FRR OSPF with passive-interfaces
 ##
-## make sure `sudo nano /etc/frr/daemons` has `ospfd=yes`, followed by `sudo systemctl restart frr`
+## make sure `/etc/frr/daemons` has `ospfd=yes`, followed by `sudo systemctl restart frr`
 ## and you ran `sudo vtysh` after that
 ##
 ## $[Networks$ - networks available to the tunnel
 ## $[No-passive Interfaces$ - interfaces that should not be covered by `passive` (e.g. `gre1`)
 conf t
 router ospf
-network $[Networks$ area 0.0.0.0
+network $[Networks with masks$ area 0.0.0.0
 passive-interface default
 no passive-interface $[No-passive Interfaces$
 exit
