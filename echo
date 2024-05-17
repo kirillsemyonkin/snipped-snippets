@@ -1,0 +1,2 @@
+## simplest `snipped` snippet for testing
+echo $@Message::Hello world!$
